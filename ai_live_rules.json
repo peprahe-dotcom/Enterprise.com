@@ -1,0 +1,16 @@
+{
+  "generated_at": "1970-01-01T00:00:00+00:00",
+  "global": {
+    "block_all_trading": true,
+    "reason": "Initialize by running: python ai_advisor_brain.py",
+    "max_positions_total": 1,
+    "news_freeze_until_utc": null
+  },
+  "risk": {
+    "per_trade_equity_fraction": 0.1
+  },
+  "symbols": {},
+  "meta": {
+    "last_weekly_review_at": null
+  }
+}
