@@ -1,0 +1,22 @@
+{
+  "poll_seconds": 5,
+  "magic": 26052402,
+  "master": {
+    "terminal_path": "C:/Program Files/MetaTrader 5/terminal64.exe",
+    "login": 0,
+    "password_env": "MT5_MASTER_PASSWORD",
+    "server": "YourBroker-Server",
+    "trade_mode": "read_only"
+  },
+  "slaves": [
+    {
+      "name": "slave_1",
+      "terminal_path": "C:/MT5_Slave_1/terminal64.exe",
+      "login": 0,
+      "password_env": "MT5_SLAVE1_PASSWORD",
+      "server": "YourBroker-Server",
+      "lot_multiplier": 1.0,
+      "max_positions_total": 1
+    }
+  ]
+}

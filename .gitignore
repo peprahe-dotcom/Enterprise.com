@@ -15,3 +15,5 @@ venv/
 comprehensive_market_analysis.json
 ai_market_insight.txt
 state_memory.json
+copier_config.json
+copier_state.json
