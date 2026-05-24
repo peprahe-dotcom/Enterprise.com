@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+*.pyd
+.Python
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+.env
+
+comprehensive_market_analysis.json
+ai_market_insight.txt
+state_memory.json
