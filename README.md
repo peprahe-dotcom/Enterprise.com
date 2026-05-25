@@ -1,2 +1,2 @@
 # Enterprise.com
-House of brand new quality products 
+God tier full ai trading bot 
