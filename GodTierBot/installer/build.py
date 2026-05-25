@@ -41,6 +41,20 @@ def build_pyinstaller() -> None:
         ]
     )
 
+def ensure_ex5() -> None:
+    ex5 = ROOT / "mql5_bridge" / "GodTierBridge.ex5"
+    if ex5.exists():
+        return
+    raise FileNotFoundError(
+        "Missing mql5_bridge/GodTierBridge.ex5.\n"
+        "Compile it once in MetaEditor:\n"
+        "  - Open MetaEditor from MT5\n"
+        "  - Open mql5_bridge/GodTierBridge.mq5\n"
+        "  - Press F7 (Compile)\n"
+        "  - Copy the resulting GodTierBridge.ex5 into mql5_bridge/ next to the .mq5\n"
+        "Then rerun: python installer\\build.py"
+    )
+
 
 def find_iscc() -> str:
     env = os.environ.get("ISCC_PATH")
@@ -71,6 +85,7 @@ def build_inno() -> Path:
 
 
 def main() -> None:
+    ensure_ex5()
     build_pyinstaller()
     exe = build_inno()
     print(exe.as_posix())
@@ -78,4 +93,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

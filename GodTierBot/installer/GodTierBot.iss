@@ -13,6 +13,7 @@ ArchitecturesInstallIn64BitMode=x64
 [Files]
 Source: "..\dist\GodTierBot\*"; DestDir: "{app}"; Flags: recursesubdirs ignoreversion
 Source: "..\mql5_bridge\GodTierBridge.mq5"; DestDir: "{app}\mt5_payload"; Flags: ignoreversion
+Source: "..\mql5_bridge\GodTierBridge.ex5"; DestDir: "{app}\mt5_payload"; Flags: ignoreversion
 Source: "..\mql5_bridge\README_INSTALL.txt"; DestDir: "{app}\mt5_payload"; Flags: ignoreversion
 
 [Icons]
@@ -41,7 +42,6 @@ end;
 procedure CopyMt5Payload;
 var
   ExpertsDir: string;
-  Ex5Path: string;
 begin
   if Mt5DataFolder = '' then
     exit;
@@ -49,16 +49,7 @@ begin
   ExpertsDir := AddBackslash(Mt5DataFolder) + 'MQL5\Experts\';
   ForceDirectories(ExpertsDir);
 
-  Ex5Path := ExpandConstant('{app}\mt5_payload\GodTierBridge.ex5');
-  if FileExists(Ex5Path) then
-  begin
-    FileCopy(Ex5Path, ExpertsDir + 'GodTierBridge.ex5', False);
-  end
-  else
-  begin
-    FileCopy(ExpandConstant('{app}\mt5_payload\GodTierBridge.mq5'), ExpertsDir + 'GodTierBridge.mq5', False);
-    MsgBox('GodTierBridge.ex5 is not included. GodTierBridge.mq5 was copied instead. Open MetaEditor and compile it once (F7).', mbInformation, MB_OK);
-  end;
+  FileCopy(ExpandConstant('{app}\mt5_payload\GodTierBridge.ex5'), ExpertsDir + 'GodTierBridge.ex5', False);
 end;
 
 procedure InitializeWizard;

@@ -28,6 +28,13 @@ This project generates a Windows installer that runs a local trading bot app and
 
 From a Windows terminal in the repo folder:
 
+First, compile the MT5 EA once so the installer can ship a ready `.ex5`:
+
+- Open MetaEditor (from MT5)
+- Open `mql5_bridge/GodTierBridge.mq5`
+- Press F7 (Compile)
+- Copy `GodTierBridge.ex5` into `mql5_bridge/` next to the `.mq5`
+
 ```bat
 python -m venv .venv
 .venv\Scripts\pip install -r requirements.txt
@@ -43,4 +50,3 @@ Output:
 - `app\godtierbot\` Python app (API + desktop UI + tray)
 - `mql5_bridge\` MT5 EA source
 - `installer\` PyInstaller + Inno Setup build scripts
-
