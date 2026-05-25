@@ -48,5 +48,7 @@ Output:
 ## Repo Layout
 
 - `app\godtierbot\` Python app (API + desktop UI + tray)
+- `app\godtierbot\engine\` Engine scaffolding for the full system (models/strategies/risk/backtesting structure)
 - `mql5_bridge\` MT5 EA source
 - `installer\` PyInstaller + Inno Setup build scripts
+- `config\` Future YAML configs (safe defaults, no secrets)

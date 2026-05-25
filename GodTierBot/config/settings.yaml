@@ -1,0 +1,12 @@
+mode: paper
+server:
+  host: 127.0.0.1
+  port: 8080
+risk:
+  max_risk_per_trade: 0.01
+  max_daily_loss_pct: 0.05
+  max_total_loss_pct: 0.10
+  max_open_positions: 5
+mt5:
+  account_id: ACCOUNT_1
+  base_url: http://127.0.0.1:8080

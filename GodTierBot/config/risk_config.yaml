@@ -1,0 +1,10 @@
+symbols:
+  default:
+    enabled: true
+    max_risk_per_trade: 0.01
+    max_lot: 2.0
+strategies:
+  trend_following:
+    enabled: true
+  mean_reversion:
+    enabled: false
