@@ -6,6 +6,7 @@ import sys
 
 from godtierbot import __version__
 from godtierbot.support_bundle import export_support_bundle
+from godtierbot.updater_client import apply_update_from_manifest
 
 
 def _run_module(path: str) -> int:
@@ -22,6 +23,9 @@ def main(argv: list[str] | None = None) -> int:
     sub.add_parser("run-copier")
     sub.add_parser("install-deps")
     sub.add_parser("export-support-bundle")
+    update_p = sub.add_parser("self-update")
+    update_p.add_argument("--manifest", default="", help="Manifest URL or local path")
+    update_p.add_argument("--yes", action="store_true")
 
     args = parser.parse_args(argv)
 
@@ -38,10 +42,14 @@ def main(argv: list[str] | None = None) -> int:
         out = export_support_bundle()
         sys.stdout.write(f"{out}\n")
         return 0
+    if args.cmd == "self-update":
+        manifest = args.manifest or "updater/version.json"
+        msg = apply_update_from_manifest(manifest_url_or_path=manifest, assume_yes=args.yes)
+        sys.stdout.write(f"{msg}\n")
+        return 0
 
     return 2
 
 
 if __name__ == "__main__":
     raise SystemExit(main())
-
