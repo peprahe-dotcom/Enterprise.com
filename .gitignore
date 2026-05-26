@@ -11,6 +11,20 @@ dist/
 .venv/
 venv/
 .env
+.env.*
+.envrc
+*.vault
+*.key
+*.pem
+*.pfx
+*.p12
+
+data/
+logs/
+cache/
+*.sqlite
+*.sqlite3
+*.db
 
 comprehensive_market_analysis.json
 ai_market_insight.txt

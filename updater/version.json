@@ -1,0 +1,26 @@
+{
+  "channel": "stable",
+  "latest": {
+    "version": "0.1.0",
+    "published_at": "2026-05-26T00:00:00Z",
+    "notes": "Initial release placeholder.",
+    "assets": {
+      "installer_exe": {
+        "name": "GodTierBot_Setup_0.1.0.exe",
+        "url": "https://github.com/OWNER/god-tier-bot/releases/download/v0.1.0/GodTierBot_Setup_0.1.0.exe",
+        "sha256": "REPLACE_ME"
+      },
+      "app_update_zip": {
+        "name": "GodTierBot_app_0.1.0.zip",
+        "url": "https://github.com/OWNER/god-tier-bot/releases/download/v0.1.0/GodTierBot_app_0.1.0.zip",
+        "sha256": "REPLACE_ME",
+        "signature": {
+          "type": "sha256_rsa",
+          "public_key_id": "release-signing-key-1",
+          "value": "REPLACE_ME"
+        }
+      }
+    }
+  },
+  "minimum_supported": "0.1.0"
+}
