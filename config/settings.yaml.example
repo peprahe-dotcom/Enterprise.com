@@ -1,0 +1,11 @@
+app:
+  name: GodTierBot
+  mode: demo
+
+mt5:
+  terminal_path: ""
+  symbols: []
+
+risk:
+  max_risk_per_trade_pct: 0.01
+  max_daily_loss_pct: 0.05
